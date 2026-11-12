@@ -1,4 +1,4 @@
-# Quran Community (nama kerja)
+# Quran Community
 
 Platform komunitas Al-Qur'an bergaya Substack: penulis (ustadz, penghafal, pengajar, pelajar) membuat **publikasi** sendiri, menulis artikel tadabbur, tafsir ringkas, catatan hafalan, atau kajian, lalu pembaca **berlangganan** dan menerima tulisan baru lewat web dan email.
 
