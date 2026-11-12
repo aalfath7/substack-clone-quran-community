@@ -1,0 +1,45 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "quran-community",
+  "main": "worker.ts",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      // Self-reference, wajib untuk OpenNext. Nama harus sama dengan "name" di atas.
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "quran-community"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "quran-community-db",
+      // Ganti dengan id dari `npx wrangler d1 create quran-community-db` sebelum deploy.
+      // Untuk lokal (--local) id ini tidak perlu asli.
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "r2_buckets": [
+    {
+      // Gambar (avatar, cover, logo). Buat sebelum deploy:
+      //   npx wrangler r2 bucket create quran-community-media
+      "binding": "MEDIA",
+      "bucket_name": "quran-community-media"
+    }
+  ],
+  "queues": {
+    // Email tulisan baru ke pelanggan. Buat sebelum deploy:
+    //   npx wrangler queues create quran-community-email
+    "producers": [{ "binding": "EMAIL_QUEUE", "queue": "quran-community-email" }],
+    "consumers": [{ "queue": "quran-community-email", "max_batch_size": 5, "max_retries": 5 }]
+  },
+  "observability": {
+    "enabled": true
+  }
+}

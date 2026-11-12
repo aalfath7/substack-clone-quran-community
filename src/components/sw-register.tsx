@@ -1,0 +1,12 @@
+"use client";
+
+import { useEffect } from "react";
+
+/** Daftarkan service worker (hanya di produksi agar tidak mengganggu hot reload). */
+export function ServiceWorkerRegister() {
+  useEffect(() => {
+    if (process.env.NODE_ENV !== "production" || !("serviceWorker" in navigator)) return;
+    navigator.serviceWorker.register("/sw.js").catch(() => undefined);
+  }, []);
+  return null;
+}

@@ -1,0 +1,13 @@
+NEXTJS_ENV=development
+# node -e "console.log(require('crypto').randomBytes(32).toString('base64url'))"
+BETTER_AUTH_SECRET=
+# Kosong di lokal: diambil dari request (dev :3000 dan preview :8787). Wajib diisi di produksi.
+BETTER_AUTH_URL=
+# Opsional. Kosongkan untuk mematikan login Google.
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+# URL publik aplikasi, dipakai untuk tautan di email
+APP_URL=http://localhost:3000
+# Kosong = email hanya dicetak ke log (mode pengembangan)
+RESEND_API_KEY=
+EMAIL_FROM=Quran Community <noreply@example.com>
