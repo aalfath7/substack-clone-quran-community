@@ -95,48 +95,7 @@ quran-community/
 └─ PROGRES.md                 catatan progres per fitur
 ```
 
-## 6. Rencana pengerjaan (per fitur)
-
-Dikerjakan **satu fitur per langkah**. Fitur berikutnya dimulai setelah fitur sebelumnya direview.
-
-**Fase 0: Fondasi**
-
-1. Setup Next.js + OpenNext Cloudflare + Tailwind, bisa `preview` lokal dan deploy.
-2. D1 + Drizzle: skema awal, migrasi, helper `getDb()`.
-
-**Fase 1: Akun & publikasi**
-
-3. Better Auth (email/password + Google), halaman masuk/daftar.
-4. Profil pengguna + username.
-5. Buat dan atur publikasi (`/@slug`).
-
-**Fase 2: Menulis & membaca**
-
-6. Editor Tiptap + simpan draf.
-7. Terbitkan tulisan + halaman artikel publik (SEO, OG image), kategori & tag.
-8. Upload cover/avatar ke R2.
-9. Halaman publikasi: daftar tulisan, arsip.
-
-**Fase 3: Komunitas**
-
-10. Berlangganan publikasi (akun atau email saja).
-11. Komentar berutas + suka + simpan.
-12. Catatan (Notes) + feed beranda dari yang diikuti.
-13. Discover: per kategori, per tag, terpopuler.
-14. Rekomendasi antarpublikasi.
-
-**Fase 4: Email & moderasi**
-
-15. Kirim email tulisan baru ke pelanggan (Cloudflare Queues + Resend), link berhenti langganan.
-16. Laporan konten + dashboard admin.
-17. Statistik penulis (views, pelanggan baru).
-
-**Fase 5: Opsional**
-
-18. Dukungan/infaq ke penulis (Midtrans/Xendit).
-19. PWA / mode baca offline.
-
-## 7. Menjalankan
+## 6. Menjalankan
 
 ```bash
 npm install
